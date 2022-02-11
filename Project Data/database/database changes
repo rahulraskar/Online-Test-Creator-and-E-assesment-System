@@ -1,0 +1,32 @@
+**Prajyot**
+Table Name: test
+alter table test add column createdOn TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+
+**Swapnil**
+
+Table Name: discussion
+alter table discussion add column testId INT;
+alter table discussion ADD CONSTRAINT FOREIGN KEY (testId) references test(testId);
+
+
+
+**Saurabh**
+Table Name: quizGroup
+alter table quizGroup modify column id int(11);
+alter table quizGroup add coloumn adminId int(11);
+alter table quizGroup ADD CONSTRAINT FOREIGN KEY (adminId) REFERENCES admin(id);
+
+
+Table Name: user
+alter table user add coloumn activationToken varchar(100);
+Alter table user DROP FOREIGN KEY user_ibfk_1;
+ALTER TABLE user ADD CONSTRAINT FOREIGN KEY (groupId) REFERENCES quizGroup(id) ON DELETE CASCADE;
+
+
+**RKR**
+Table Name: admin
+alter table admin add column activationToken VARCHAR(100);
+alter table admin add column active INT;
+
+

@@ -1,0 +1,227 @@
+Project Features Listing(To be Implemented): 
+
+Common
+============================================ 
+1) User Registration
+2) User Login 
+3) Forgot Password
+
+++++++++++++++++++++++++++++++++++++++++++++
+Admin of (School/ Company)
+++++++++++++++++++++++++++++++++++++++++++++
+ i) User management
+	1)Create Group
+	2)Add Member
+	3)Delete Member
+	4)Block Member
+	5)Delete Group
+
+ ii) Test Management
+	1)Create Test
+	2)Update Test_details
+	3)Delete Test
+	4)-Add Question
+	5)-Delete Question
+	6)-Update Question
+	7)Assign User Group(To test) 
+	8)Schedule Test	
+	9)Preview
+	10)view test_waiting_for_approval
+	11)Grant_approval/Deny_approval
+	12)view public_test
+
+ iii) Profile Management 
+	1) Add personal_Details
+	2) Update personal_Details
+	3) update password
+	4) view hosted_tests
+
+ iv) Result Section
+		1) view result (result analysis per test)
+		2) print result
+
+ v) Discussion Section
+	1) view discussion_panel
+	2) Answer Query
+
+++++++++++++++++++++++++++++++++++++++++++++
+User Section( Student / Employee)
+++++++++++++++++++++++++++++++++++++++++++++
+
+1) Profile Section
+	1)view hosted test
+	2)view assigned test
+	3)view attempted test
+	4)view missed test
+	4)attempt test
+
+2) Profile Management 
+	1) Add Personal_Details
+	2) Update Personal_Details
+	3) update Password
+
+3) Test Management
+	1) View Public_test
+	2) Create Test
+	3) Submit Test_for_Approval
+
+4) Result Section
+	1) view result (result analysis per test)
+	2) print result
+
+5) Discussion Section
+	1) view discussion_panel
+	2) Ask Query
+
+
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+:Admin\n (Educational Institute/Company): as Admin
+:(Student/User): as User
+rectangle Online_Test_Creator_and_E-assesment_System {
+
+Admin -- (Register User)           -Done
+Admin -- (Upload Profile Picture)  -Done
+Admin -- (Login User)
+Admin -- (update profile)          -Done
+Admin -- (Reset Password)          -Done
+
+--------------------------------------
+Admin -- (Create Group)
+Admin -- (Add Member)
+Admin -- (Delete Member)
+Admin -- (Block Member)
+Admin -- (Delete Group)
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Admin -- (Create Test)  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Admin -- (Update Test_details)
+Admin -- (Delete Test)
+Admin -- (Assign User_Group)
+Admin -- (Schedule Test)
+Admin -- (Preview Test)
+Admin -- (View Tests_for_approval)
+Admin -- (Approve Test)
+Admin -- (Disapprove Test)
+
+Admin -- (Add Personal_Details)
+Admin -- (Update Personal_Details)
+Admin -- (update password)
+Admin -- (View Hosted_Tests)
+
+Admin -- (View Result)
+Admin -- (Print Result)
+
+Admin -- (View discussion_panel)
+Admin -- (Answer Query)
+
+
+(Login User) -- User
+(Register User) -- User
+(Reset Password) -- User
+
+(View Hosted_Tests) -- User
+(View Assigned_Test) -- User
+(View Attempted_Test) -- User
+(view Missed_Test) -- User
+(Attempt Test) -- User
+
+(Add Personal_Details) -- User
+(Update Personal_Details) -- User
+(update password) -- User 
+
+(View Public_test) -- User
+(Create Test) -- User >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(Submit Test_for_Approval) -- User
+
+(View Result) -- User
+(Print Result) -- User
+
+(View discussion_panel) -- User
+(Ask Query) -- User
+
+@enduml
+	
+
+
+new app
+@startuml
+left to right direction
+:Admin\n (Educational Institute/Company): as Admin
+:(Student/User): as User
+
+Admin -- (Register User) 
+(Register User) -- User
+
+Admin -- (Login User)
+(Login User) -- User
+
+Admin -- (Reset Password)
+(Reset Password) -- User
+
+Admin -- (Create Test)
+(Create Test) -- User
+
+ (Create Group) --  Admin 
+ (Add Member) -- Admin
+ (Delete Member) -- Admin
+ (Block Member) -- Admin 
+ (Delete Group) -- Admin 
+ 
+ (Update Test_details) -- Admin 
+ (Delete Test) -- Admin
+ (Assign User_Group) -- Admin
+ (Schedule Test) -- Admin
+ (Preview Test) -- Admin
+ (View Tests_for_approval) -- Admin
+ (Approve Test) -- Admin
+ (Disapprove Test) -- Admin
+ 
+  Admin -- (Add Personal_Details) 
+  (Add Personal_Details) -- User 
+  
+  Admin -- (Update Personal_Details)
+ (Update Personal_Details) -- User
+
+ Admin -- (update password)
+ (update password) -- User
+ 
+ Admin -- (View Hosted_Tests)
+ (View Hosted_Tests) -- User
+
+ Admin -- (View Result)
+ (View Result) -- User
+
+Admin -- (Print Result)
+(Print Result) -- User
+
+Admin -- (View discussion_panel)  
+(View discussion_panel) -- User
+
+(Answer Query) -- Admin
+
+User -- (View Assigned_Test) 
+User -- (View Attempted_Test)
+User -- (view Missed_Test) 
+User -- (Attempt Test) 
+
+Admin -- (View Public_test)
+(View Public_test) -- User
+	
+User -- (Submit Test_for_Approval)
+User -- (Ask Query) 
+
+
+@enduml
+
+
+
+
+
+
+
+
+
+

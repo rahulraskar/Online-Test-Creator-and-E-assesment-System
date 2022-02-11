@@ -1,0 +1,119 @@
+In our project we have three types of assesment 
+1.Diagnostic
+2.Formative
+3.Summative
+
+The evaluation of the same can be taken as follow.
+
+*Suppose the test is composed of N concepts.
+*The test contains 'n1' questions of concept N1,'n2' questions of concept N2.,'n3' questions of concept N3,'n4' questions of concept N4....
+*Total number of students attempting the test is 'S'.
+
+ The evaluation will be done for overall topic as well as for each sub-topic.
+ 
+ So, for an Instance,
+
+A test has Q questions.
+Total number of sub-topics:N
+n1 questions from topic N1
+n2 questions from topic N2
+n3 questions from topic N3
+n4 questions from topic N4
+
+suppose all test taker give X correct answers out of T total questions T= no. of students * no. of questions in the test
+Correct answers for topic N1 = X1
+Correct answers for topic N2 = X2
+Correct answers for topic N3 = X3
+Correct answers for topic N4 = X4
+
+% of correct answers for a topic = 100*(total number of correct answers for that topic)/((number of questions for that topic)*(total number of students attempted the exam))
+
+% of correct answer for overall topic = 100 * X/(Q*S)
+
+% of correct answer for overall topic N1 = 100 * X1/(n1*S)
+
+% of correct answer for overall topic N2 = 100 * X2/(n2*S)
+
+% of correct answer for overall topic N3 = 100 * X3/(n3*S)
+
+% of correct answer for overall topic N4 = 100 * X4/(n4*S)
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+LETS CONSIDER FOLLOWING EXAMPLE
+
+Suppose there is a test on C
+so,
+Total number of questions = 20
+Topic : C
+   Sub-topic-1 : Data Types -5 questions
+   Sub-topic-2 : Array      -5 questions
+   Sub-topic-3 : Pointers   -5 questions
+   Sub-topic-4 : Functions  -5 questions
+
+There are total 25 students assigned for the test
+But, only 22 students attempted the test,So we should ignore those 3 students during evaluation
+
+Here,
+Total number of questions will be = 20 * 22
+                                  = 440 questions
+
+Suppose
+Total correct answer given by students = 300
+
+% of correct answer given for overall test = 100*(total number of correct answer)/((number of questions for test)*(total number of students attempted the exam))
+
+                                           = 100*300/440
+% of correct answer given for overall test = 68.18%
+
+Now,let calculate for individual sub-topic
+
+Consider,sub-topic = Array
+Total number of questions on Array will be = 5 * 22
+                                  = 110 questions
+
+Suppose
+Total correct answer given by students = 50
+
+% of correct answer given for Array topic = 100*(total number of correct answers for that topic)/((number of questions for that topic)*(total number of students attempted the exam))
+
+                                           = 100*50/110
+% of correct answer given for Array topic = 45.45%
+
+So, teacher will know students are weak in Array cocepts to take further action
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
